@@ -14,20 +14,29 @@ typealias Operation = (Double, Double) -> Double
 enum RPNElement {
     case operand(Double)
     case `operator`(String, Operation)
+    
+    static var plus: RPNElement { return RPNElement.operator("+"){ $0 + $1 }}
+    static var mult: RPNElement { return RPNElement.operator("*", { (one, two) in one * two })}
 }
 
-enum CompassPoint  {
-    case North
-    case South
-    case East
-    case West
-}
 
 struct Calculator {
     //5 2 +
     // operand1 operand2 operator
     func calculate(array: [RPNElement]) -> Double {
-        
-        return 0
+        var args: [Double] = []
+        var result: Double = 0
+        array.forEach { (item) in
+            switch item {
+            case .operand(let number):
+                args.append(number)
+            case .operator(_, let operation):
+                let operand1 = args[args.count - 1]
+                let operand2 = args[args.count - 2]
+                result = operation(operand1, operand2)
+            }
+            
+        }
+        return result
     }
 }

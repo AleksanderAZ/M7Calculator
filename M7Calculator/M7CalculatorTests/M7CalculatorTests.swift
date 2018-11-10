@@ -11,24 +11,42 @@ import XCTest
 
 class M7CalculatorTests: XCTestCase {
 
+    var calculator: Calculator!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        calculator = Calculator()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test5plus2() {
+        let operand1 = RPNElement.operand(5)
+        let operand2 = RPNElement.operand(2)
+        let operatorPlus = RPNElement.plus
+        let rpnFile = [operand1, operand2, operatorPlus]
+        let result = calculator.calculate(array: rpnFile)
+        XCTAssert((result == 7), "5 + 2 equal 7")
+        
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test3plus7() {
+        let operand1 = RPNElement.operand(3)
+        let operand2 = RPNElement.operand(7)
+        let operatorPlus = RPNElement.plus
+        let rpnFile = [operand1, operand2, operatorPlus]
+        let result = calculator.calculate(array: rpnFile)
+        XCTAssert((result == 10), "3 + 7 equal 10")
     }
-
+    
+    func testNegativeNumber() {
+        let operand1 = RPNElement.operand(-1)
+        let operand2 = RPNElement.operand(6)
+        let operatorPlus = RPNElement.plus
+        let rpnFile = [operand1, operand2, operatorPlus]
+        let result = calculator.calculate(array: rpnFile)
+        XCTAssert((result == 5), "-1 + 6 equal 5")
+    }
+    
 }
