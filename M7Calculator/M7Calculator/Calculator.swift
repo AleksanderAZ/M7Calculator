@@ -35,8 +35,8 @@ struct Calculator {
                 let operand2 = args[args.count - 2]
                 result = operation(operand1, operand2)
             }
-            
         }
+        
         return result
     }
 }
