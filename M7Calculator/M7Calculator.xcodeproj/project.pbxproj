@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D997C3E021C58D2B008A054C /* QuadraticEquationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C3DF21C58D2B008A054C /* QuadraticEquationTests.swift */; };
+		D997C3E521C58DD8008A054C /* EquationSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C3E421C58DD8008A054C /* EquationSolver.swift */; };
+		D997C3E721C58EEF008A054C /* ComplexNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C3E621C58EEF008A054C /* ComplexNumber.swift */; };
 		DB1F82B2219701CD001A33C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F82B1219701CD001A33C2 /* AppDelegate.swift */; };
 		DB1F82B4219701CD001A33C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F82B3219701CD001A33C2 /* ViewController.swift */; };
 		DB1F82B7219701CD001A33C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1F82B5219701CD001A33C2 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D997C3DF21C58D2B008A054C /* QuadraticEquationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadraticEquationTests.swift; sourceTree = "<group>"; };
+		D997C3E421C58DD8008A054C /* EquationSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationSolver.swift; sourceTree = "<group>"; };
+		D997C3E621C58EEF008A054C /* ComplexNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexNumber.swift; sourceTree = "<group>"; };
 		DB1F82AE219701CD001A33C2 /* M7Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M7Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1F82B1219701CD001A33C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB1F82B3219701CD001A33C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D997C3E321C58DD8008A054C /* QuadraticEquation */ = {
+			isa = PBXGroup;
+			children = (
+				D997C3E421C58DD8008A054C /* EquationSolver.swift */,
+				D997C3E621C58EEF008A054C /* ComplexNumber.swift */,
+			);
+			name = QuadraticEquation;
+			path = M7Calculator/QuadraticEquation;
+			sourceTree = "<group>";
+		};
 		DB1F82A5219701CD001A33C2 = {
 			isa = PBXGroup;
 			children = (
+				D997C3E321C58DD8008A054C /* QuadraticEquation */,
 				DB1F82B0219701CD001A33C2 /* M7Calculator */,
 				DB1F82C5219701CF001A33C2 /* M7CalculatorTests */,
 				DB1F82AF219701CD001A33C2 /* Products */,
@@ -93,6 +110,7 @@
 		DB1F82C5219701CF001A33C2 /* M7CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				D997C3DF21C58D2B008A054C /* QuadraticEquationTests.swift */,
 				DB1F82C6219701CF001A33C2 /* M7CalculatorTests.swift */,
 				DB1F82C8219701CF001A33C2 /* Info.plist */,
 			);
@@ -203,6 +221,8 @@
 				DB1F82B4219701CD001A33C2 /* ViewController.swift in Sources */,
 				DB1F82B2219701CD001A33C2 /* AppDelegate.swift in Sources */,
 				DB1F82D2219703D6001A33C2 /* Calculator.swift in Sources */,
+				D997C3E521C58DD8008A054C /* EquationSolver.swift in Sources */,
+				D997C3E721C58EEF008A054C /* ComplexNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D997C3E021C58D2B008A054C /* QuadraticEquationTests.swift in Sources */,
 				DB1F82C7219701CF001A33C2 /* M7CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
